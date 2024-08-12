@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (min-widrh:480px) {
+            .nav{
+                display: flex;
+                flex-direction: row;
+            }
+            .nav ol{
+                display: flex;
+                flex-direction: row;
+            }
+            body{
+                background-color: yellowgreen;
+            }
+        }
+        *{
+            color:white;
+        }
+        .nav{
+            background-color: navy;
+            display: grid;
+            margin: -10px;
+            color: white;
+            grid-template-columns: 2fr 10fr;
+            justify-content: space-between;
+            height: 53px;
+               
+        }
+        .nav h1{
+            margin: 5px;
+            font-size: 35px;
+            margin-left: 15px;
+        }
+        .nav h1:hover{
+            font-size: 25px;
+            text-shadow: 2px 2px 3px red;
+        }
+       .nav ol{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns:2.4fr 2.4fr 2.4fr 2.4fr 2.4fr ;
+       }
+       .nav ol li{
+        display: inline;
+        margin-left: 30px;
+        font-size: 20px;
+       }
+       .bgi{
+        background-image: url("public/images/bgi.jpg");
+        height: 150px;
+        margin-left: -5px;
+        background-size: cover;
+        background-position: center;
+        width: 100%; height: 100vh; overflow: hidden;
+        
+       }
+       .bgi button{
+         border: none;
+         background-color: navy;
+         color: white;
+         font-size: 20px;
+       }
+       .bgi button:hover{
+        font-size: 25px;
+        text-shadow: 3px 3px 4px black;
+       }
+       .alignc{
+        display: flex;
+        
+        height: 200px;
+       }
+       .bg{
+            height: 100px;
+            width: 100px;
+            color: white;
+            background-color: white;
+            padding: 100px;
+       }
+       .divid{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        margin: -10px;
+        position: relative;
+        justify-content: center;
+       
+       }
+       .indiv{
+        height: 50%;
+        width: 50%;
+        margin-top: 10%;
+        overflow-y: scroll;
+        scrollbar-color: navy;
+               }
+       .indiv::-webkit-scrollbar{
+        display: none;
+       }
+       .indiv li{
+        font-size: 30px;
+       }
+       .indiv img{
+        height: 150px;
+        width: 150px;
+        border-radius: 150px;
+        margin-left: 40%;
+        margin-top: 10px;
+        z-index:1 ;
+       }
+       .li{
+        margin-left: 40%;
+       }
+       .li h1{
+        position: sticky;
+        top: 2px;
+       }
+       .imgre{
+        position: relative;
+        z-index:1 ;
+       }
+       .imgpo{
+        z-index:-1 ;
+       }
+       
+    
+      
+    </style>
+    <script>
+        
+        function profile(){
+            var b=document.getElementById("cre")
+            if(b.hasChildNodes()){
+                var c=b.lastChild;
+                b.removeChild(c);
+            }
+            var a=document.createElement("div");
+            a.className="indiv left";
+            a.innerHTML=
+            `<div>
+                <div class=imgre>
+                    <div class=imgpo><img src="public/images/H.jpg"></div>
+                    <h1>VALLAPUNENI RAMA HEMANTH</h1>
+                    <p>My name is V.Rma Hemanth .Iam from Chagalamarri.Iam pursuing final year B.Tech in <b>Rajeev Gandhi Memorial College Of Engineering And Technology</b>
+                    in the stream of computer science and engineering. Being like a fresher to looking for a job to enhance my potential growth in my cariar</p>
+                    <p>I am a hard working, honest individual. I am a good timekeeper, always willing to learn new skills. I am friendly, helpful and polite, have a good sense of humour. I am able to work independently in busy environments and also within a team setting. I am outgoing and tactful, and able to listen effectively when solving problems.</p>
+                </div> 
+            </div>`;
+            b.appendChild(a); 
+        }
+        function home(){
+            var b=document.getElementById("cre")
+            if(b.hasChildNodes()){
+                var c=b.lastChild;
+                b.removeChild(c);
+            }
+            var a=document.createElement("div");
+             a.className="indiv right";
+             var h=new Date().getHours();
+            a.innerHTML=`
+            <div>
+                <div align=center>
+                    <h1>VALLAPUNENI RAMA HEMANTH</h1>
+                     <h1>Good${h<11?" Morning":h<16?"Afternoon":h<1?"Enening":"Night"}</h1>
+                    <h2>This time is going very soon..</h2>
+                   
+                </div>
+            </div>`;
+            
+            b.appendChild(a); 
+        }
+        function skills(){
+            var b=document.getElementById("cre")
+            if(b.hasChildNodes()){
+                var c=b.lastChild;
+                b.removeChild(c);
+            }
+
+            var a=document.createElement("div");
+             a.className="indiv left";
+            a.innerHTML=`
+            <div class=li>
+                <h1>SKILLS</h1>
+                <ul >
+                    <li>Java</li>
+                    <li>python</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>React</li>
+                    <li>SQL</li>
+                    <li>Javascript</li>
+                </ul>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div>`;
+            b.appendChild(a); 
+        }
+        function studies(){
+            var b=document.getElementById("cre")
+            if(b.hasChildNodes()){
+                var c=b.lastChild;
+                b.removeChild(c);
+            }
+            var a=document.createElement("div");
+             a.className="indiv right";
+            a.innerHTML=`
+            <div >
+                <div class=li>
+                    
+                    <div >
+                        <h1>Graduation</h1>
+                        <h3>Rajeev Gandhi Memorial Collage Of Engineering And Technology</h3>
+                        <h4>Computer Science And Engineering</h4>
+                        <h4>2021-present             81%</h4>
+                        
+                    </div>
+                   
+                    <div >
+                         <h1>Intermeadiate</h1>
+                        <h3>Akansha Junior Collage</h3>
+                        <h4>Mpc</h4>
+                        <h4>Nandyal      92%<h4>
+                        
+                        
+                    </div>
+                   
+                    <div >
+                         <h1>SSC Education</h1>
+                        <h3>Sri chaitanya E M High school</h3>
+                        <h4>Nandyal      90%</h4>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                    </div>
+
+                   
+                </div>
+            </div>`;
+            
+            b.appendChild(a); 
+        }
+    </script>
+</head>
+<body class="bgi" onload="home()">
+
+        <div class="nav">
+            <div>
+                <button onclick="profile()"><h1>HEMANTH...</h1></button>
+            </div>
+            <div>
+                <ol>
+                    <li><button onclick="home()">Home</button></li>
+                    <li><button onclick="about">Aboutus</button></li>
+                    <li><button onclick="skills()">Skills</button></li>
+                    <li><button onclick="studies()">Studies</button></li>
+                    <li><button onclick="work">Work</button></li>
+                </ol>
+                
+            </div>
+        </div>
+        <div class="divid" id="cre">
+        
+        </div>
+    
+</body>
+</html>
